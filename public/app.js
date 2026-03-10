@@ -1,6 +1,6 @@
 const BASE_PRICE = 320;
-const MIN_PRICE = 250;
-const MAX_DISCOUNT = 70;
+const MIN_PRICE = 170;
+const MAX_DISCOUNT = 150;
 const WHATSAPP_NUMBER = "59160932596";
 const QUIZ_QUESTIONS = [
   {
