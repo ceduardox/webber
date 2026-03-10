@@ -1,0 +1,10 @@
+{
+  "name": "berberina-funnel-bolivia",
+  "version": "1.0.0",
+  "description": "High-conversion gamified landing funnel for Berberina (COD Bolivia)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "MIT"
+}
