@@ -296,7 +296,9 @@ h2 {
 .quiz-image {
   width: 100%;
   height: 190px;
-  object-fit: cover;
+  object-fit: contain;
+  background: linear-gradient(180deg, #f8fdff 0%, #edf8ff 100%);
+  padding: 6px;
   border-radius: 16px;
   margin-top: 16px;
   border: 1px solid #dbeafe;
