@@ -22,22 +22,49 @@
       <header class="top-chip">
         <p class="top-chip__text">Envio nacional + Pago contra entrega | Oferta activa hoy</p>
       </header>
+      <section class="trust-strip" aria-label="Indicadores de confianza">
+        <span>+3,200 pedidos entregados</span>
+        <span>Atencion por WhatsApp</span>
+        <span>Entrega nacional</span>
+      </section>
 
       <section id="screen-hero" class="screen active">
         <article class="card hero-card">
-          <p class="pill">Oferta de hoy</p>
+          <p class="pill">Protocolo Metabolico 2026</p>
+          <div class="hero-proof">
+            <span class="hero-proof__star">4.9/5</span>
+            <span>Recomendado por clientes en Bolivia</span>
+          </div>
           <h1>Desbloquea tu precio especial en Berberina</h1>
           <p class="lead">Hoy puedes obtener hasta <strong>150 Bs de descuento</strong>.</p>
+          <img
+            src="/assets/benefits-expert.svg?v=2"
+            alt="Especialista de salud y Berberina"
+            class="hero-image"
+            loading="eager"
+            fetchpriority="high"
+          />
           <div class="price-row">
             <span class="price-old">320 Bs</span>
             <span class="price-now">Desde 170 Bs</span>
+          </div>
+          <div class="hero-points">
+            <span>Control glucemico</span>
+            <span>Energia celular</span>
+            <span>Peso saludable</span>
           </div>
           <button id="heroCta" class="btn btn-primary btn-float">Descubrir mi descuento</button>
         </article>
       </section>
 
       <section id="screen-quiz" class="screen">
-        <article class="card">
+        <article class="card quiz-card">
+          <div class="quiz-meta">
+            <span class="quiz-tag">Evaluacion guiada</span>
+            <div class="quiz-dots" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
           <div class="progress-head">
             <p id="quizStep" class="progress-label">Paso 1 de 3</p>
             <span id="quizPercent" class="progress-percent">33%</span>
@@ -57,6 +84,7 @@
 
       <section id="screen-benefits" class="screen">
         <article class="card">
+          <p class="section-kicker">Beneficios clave</p>
           <h2>Berberina para apoyo metabolico diario</h2>
           <p class="lead">Formula enfocada en control glucemico y energia celular.</p>
           <img
@@ -66,10 +94,10 @@
             loading="lazy"
           />
           <ul class="benefit-list">
-            <li>Apoya el metabolismo de la glucosa</li>
-            <li>Ayuda a regular niveles de azucar</li>
-            <li>Apoya el control saludable del peso</li>
-            <li>Favorece la energia celular diaria</li>
+            <li><span class="benefit-dot">✓</span>Apoya el metabolismo de la glucosa</li>
+            <li><span class="benefit-dot">✓</span>Ayuda a regular niveles de azucar</li>
+            <li><span class="benefit-dot">✓</span>Apoya el control saludable del peso</li>
+            <li><span class="benefit-dot">✓</span>Favorece la energia celular diaria</li>
           </ul>
           <button id="benefitsCta" class="btn btn-primary">Buscar descuento disponible</button>
         </article>
@@ -88,6 +116,7 @@
 
       <section id="screen-game" class="screen">
         <article class="card game-card">
+          <p class="section-kicker">Descuento interactivo</p>
           <h2>Catch the Discount</h2>
           <p class="lead">Toca las monedas y acumula descuento en 10 segundos.</p>
           <div class="hud">
@@ -102,6 +131,7 @@
       <section id="screen-reward" class="screen">
         <article class="card reward-card">
           <div id="confettiLayer" class="confetti-layer" aria-hidden="true"></div>
+          <p class="section-kicker">Precio desbloqueado</p>
           <h2>Felicidades, desbloqueaste tu precio especial</h2>
           <div class="price-summary">
             <p>Precio original: <strong>320 Bs</strong></p>
@@ -114,6 +144,7 @@
 
       <section id="screen-urgency" class="screen">
         <article class="card urgency-card">
+          <p class="section-kicker">Reserva inmediata</p>
           <h2>Tu descuento expira pronto</h2>
           <p class="countdown-wrap">
             Tu descuento expira en
@@ -126,6 +157,7 @@
 
       <section id="screen-checkout" class="screen">
         <article class="card checkout-card">
+          <p class="section-kicker">Finalizar pedido</p>
           <h2>Finaliza tu pedido</h2>
           <p class="lead">
             Pago contra entrega disponible en toda Bolivia. Tu precio desbloqueado es
