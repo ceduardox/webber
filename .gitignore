@@ -2,4 +2,5 @@ data/*.ndjson
 data/*.sqlite
 data/*.sqlite-shm
 data/*.sqlite-wal
+data/*.log
 
