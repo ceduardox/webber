@@ -1,0 +1,36 @@
+<svg width="900" height="520" viewBox="0 0 900 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="520" rx="32" fill="url(#bg)" />
+  <circle cx="146" cy="118" r="92" fill="#DBEAFE" />
+  <circle cx="760" cy="366" r="118" fill="#DCFCE7" />
+  <rect x="92" y="328" width="716" height="110" rx="24" fill="#E0F2FE" />
+  <ellipse cx="292" cy="372" rx="120" ry="24" fill="#BFDBFE" />
+  <circle cx="288" cy="170" r="40" fill="#FCD7B8" />
+  <path d="M250 168C250 136 273 120 299 120C326 120 346 140 346 165C346 176 341 188 334 194H250V168Z" fill="#334155" />
+  <rect x="232" y="214" width="112" height="110" rx="30" fill="#FFFFFF" />
+  <path d="M260 214H316L324 272H252L260 214Z" fill="#E2E8F0" />
+  <rect x="220" y="228" width="22" height="70" rx="11" fill="#F1F5F9" />
+  <rect x="344" y="228" width="22" height="70" rx="11" fill="#F1F5F9" />
+  <rect x="250" y="316" width="34" height="62" rx="14" fill="#1E293B" />
+  <rect x="294" y="316" width="34" height="62" rx="14" fill="#1E293B" />
+  <rect x="282" y="248" width="16" height="60" rx="8" fill="#22C55E" />
+  <rect x="260" y="272" width="60" height="16" rx="8" fill="#22C55E" />
+  <rect x="458" y="110" width="218" height="286" rx="44" fill="#FFFFFF" />
+  <rect x="488" y="82" width="158" height="52" rx="18" fill="#E2E8F0" />
+  <rect x="494" y="168" width="146" height="132" rx="18" fill="url(#label)" />
+  <rect x="494" y="312" width="146" height="64" rx="14" fill="#F0FDF4" />
+  <text x="567" y="220" text-anchor="middle" fill="#0F172A" font-size="23" font-family="Poppins, Arial" font-weight="700">BERBERINA</text>
+  <text x="567" y="252" text-anchor="middle" fill="#0F172A" font-size="14" font-family="Inter, Arial" font-weight="600">SOPORTE METABOLICO</text>
+  <text x="567" y="349" text-anchor="middle" fill="#166534" font-size="21" font-family="Poppins, Arial" font-weight="700">RECOMENDADO</text>
+  <rect x="692" y="146" width="122" height="72" rx="14" fill="#FFFFFF" />
+  <path d="M716 190L744 166L766 180L790 154" stroke="#22C55E" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  <defs>
+    <linearGradient id="bg" x1="78" y1="26" x2="834" y2="484" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ECFEFF" />
+      <stop offset="1" stop-color="#F0FDF4" />
+    </linearGradient>
+    <linearGradient id="label" x1="500" y1="174" x2="638" y2="296" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#BBF7D0" />
+      <stop offset="1" stop-color="#7DD3FC" />
+    </linearGradient>
+  </defs>
+</svg>

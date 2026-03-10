@@ -1,17 +1,26 @@
 <svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="450" rx="28" fill="url(#paint0_linear)" />
-  <ellipse cx="170" cy="318" rx="130" ry="90" fill="#E0F2FE" />
-  <ellipse cx="632" cy="114" rx="120" ry="86" fill="#DCFCE7" />
-  <rect x="266" y="82" width="270" height="288" rx="34" fill="white" fill-opacity="0.95" />
-  <rect x="308" y="136" width="186" height="132" rx="20" fill="#DBEAFE" />
-  <path d="M355 192C355 165.49 376.49 144 403 144C429.51 144 451 165.49 451 192V214C451 240.51 429.51 262 403 262C376.49 262 355 240.51 355 214V192Z" fill="#F0F9FF" />
-  <path d="M385 214L402 197L420 214" stroke="#22C55E" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M403 196V236" stroke="#22C55E" stroke-width="10" stroke-linecap="round" />
-  <circle cx="338" cy="110" r="14" fill="#38BDF8" />
-  <circle cx="466" cy="110" r="14" fill="#22C55E" />
-  <circle cx="403" cy="109" r="14" fill="#F59E0B" />
+  <rect width="800" height="450" rx="28" fill="url(#bg)" />
+  <circle cx="670" cy="96" r="76" fill="#DBEAFE" />
+  <circle cx="108" cy="352" r="110" fill="#DCFCE7" />
+  <rect x="72" y="278" width="654" height="94" rx="22" fill="#E0F2FE" />
+  <ellipse cx="412" cy="342" rx="132" ry="26" fill="#BFDBFE" />
+  <circle cx="414" cy="174" r="34" fill="#FCD7B8" />
+  <path d="M380 168C380 142 398 128 421 128C443 128 458 145 458 164C458 175 454 184 448 190H380V168Z" fill="#334155" />
+  <rect x="362" y="208" width="104" height="94" rx="28" fill="#38BDF8" />
+  <rect x="344" y="224" width="28" height="62" rx="12" fill="#0EA5E9" />
+  <rect x="456" y="226" width="28" height="60" rx="12" fill="#0EA5E9" />
+  <rect x="374" y="298" width="34" height="58" rx="14" fill="#334155" />
+  <rect x="420" y="298" width="34" height="58" rx="14" fill="#334155" />
+  <rect x="486" y="232" width="108" height="72" rx="14" fill="#FFFFFF" />
+  <rect x="500" y="246" width="80" height="44" rx="10" fill="#E0F2FE" />
+  <text x="540" y="274" text-anchor="middle" fill="#16A34A" font-size="24" font-family="Poppins, Arial" font-weight="700">96</text>
+  <text x="540" y="290" text-anchor="middle" fill="#0EA5E9" font-size="12" font-family="Inter, Arial">mg/dL</text>
+  <rect x="524" y="306" width="14" height="44" rx="6" fill="#94A3B8" />
+  <circle cx="531" cy="356" r="9" fill="#64748B" />
+  <rect x="254" y="224" width="84" height="52" rx="12" fill="#F8FAFC" />
+  <path d="M272 252L288 236L304 252L320 240" stroke="#22C55E" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
   <defs>
-    <linearGradient id="paint0_linear" x1="58" y1="35" x2="760" y2="432" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="70" y1="26" x2="744" y2="430" gradientUnits="userSpaceOnUse">
       <stop stop-color="#ECFEFF" />
       <stop offset="1" stop-color="#F8FAFC" />
     </linearGradient>
