@@ -321,6 +321,42 @@ h2 {
   background: #f0f9ff;
 }
 
+.hero-testimonials {
+  margin-top: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.t-card {
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid #dbeafe;
+  background: #f8fbff;
+}
+
+.t-card p {
+  margin: 0;
+  color: #1e293b;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.t-card strong {
+  display: block;
+  margin-top: 6px;
+  color: #0369a1;
+  font-size: 0.78rem;
+}
+
+.hero-disclaimer {
+  margin-top: 10px;
+  color: #64748b;
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
 .btn {
   width: 100%;
   border: 0;

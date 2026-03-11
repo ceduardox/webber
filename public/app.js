@@ -4,25 +4,25 @@ const MAX_DISCOUNT = 150;
 const WHATSAPP_NUMBER = "59160932596";
 const QUIZ_QUESTIONS = [
   {
-    id: "metabolism",
-    text: "Te gustaria mejorar tu metabolismo de la glucosa?",
-    hint: "Muchas personas comienzan con apoyo diario para su sensibilidad metabolica.",
+    id: "diabetes_status",
+    text: "Tienes diagnostico de diabetes tipo 2 o prediabetes?",
+    hint: "Si ya tienes diagnostico, este apoyo debe acompanarse con control medico.",
     image: "/assets/quiz-metabolismo.svg?v=2",
-    alt: "Ilustracion sobre metabolismo",
+    alt: "Persona revisando salud metabolica",
   },
   {
-    id: "sugar",
-    text: "Te preocupa mantener estables tus niveles de azucar en sangre?",
-    hint: "Controlar picos de glucosa puede ayudar en energia y bienestar general.",
+    id: "sugar_spikes",
+    text: "Te gustaria reducir picos de azucar despues de las comidas?",
+    hint: "Muchos usuarios buscan estabilidad glucemica para sentirse mejor durante el dia.",
     image: "/assets/quiz-azucar.svg?v=2",
-    alt: "Ilustracion sobre control de azucar",
+    alt: "Persona monitoreando niveles de azucar",
   },
   {
-    id: "weight",
-    text: "Quieres apoyo para controlar el peso junto a una rutina saludable?",
-    hint: "La berberina suele elegirse como parte de habitos para salud metabolica.",
+    id: "insulin_support",
+    text: "Quieres apoyo en energia y control de peso asociado a resistencia a la insulina?",
+    hint: "La berberina suele integrarse a habitos saludables para apoyo metabolico.",
     image: "/assets/quiz-peso.svg?v=2",
-    alt: "Ilustracion sobre control de peso",
+    alt: "Persona enfocada en control de peso",
   },
 ];
 
@@ -214,9 +214,9 @@ function updateQuiz() {
 
 function calculateKnowledgeScore(answers) {
   const questionWeights = {
-    metabolism: 30,
-    sugar: 40,
-    weight: 30,
+    diabetes_status: 35,
+    sugar_spikes: 40,
+    insulin_support: 25,
   };
   const answerMultiplier = {
     si: 1,
