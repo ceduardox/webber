@@ -29,6 +29,12 @@ body {
   min-height: 100%;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 body {
   font-family: "Inter", sans-serif;
   color: var(--text-main);
@@ -946,6 +952,27 @@ h2 {
 
   .trust-badges {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 360px) {
+  .app-shell {
+    padding: 12px 10px 26px;
+  }
+
+  .card {
+    padding: 18px 14px;
+  }
+
+  h1 {
+    font-size: 1.56rem;
+  }
+
+  .hero-image,
+  .benefit-image,
+  .quiz-image {
+    height: auto;
+    min-height: 150px;
   }
 }
 
