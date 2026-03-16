@@ -1,208 +1,533 @@
-﻿<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Berberina Bolivia | Apoyo de Glucosa + Descuento</title>
-    <meta
-      name="description"
-      content="Conoce beneficios de Berberina para apoyo de glucosa y diabetes, y luego desbloquea precio especial con pago contra entrega en Bolivia."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/styles.css?v=8" />
-    <script defer src="/app.js?v=8"></script>
-  </head>
-  <body>
-    <main class="app-shell">
-      <header class="top-chip">
-        <p class="top-chip__text">Envio nacional + Pago contra entrega | Oferta activa hoy</p>
-      </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Berberina Pro | Bio-Metabolismo Bolivia</title>
+    <meta name="description" content="Berberina para apoyo de glucosa, metabolismo y control de peso en Bolivia. Desbloquea tu descuento y pide por WhatsApp con pago contra entrega.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Outfit", sans-serif;
+            background-color: #020617;
+            color: #f8fafc;
+            overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
 
-      <section class="trust-strip" aria-label="Indicadores de confianza">
-        <span>+3,200 pedidos entregados</span>
-        <span>Atencion por WhatsApp</span>
-        <span>Entrega nacional</span>
-      </section>
+        .bg-gradient-dark {
+            background:
+                radial-gradient(circle at top, rgba(30, 41, 59, 0.95) 0%, rgba(2, 6, 23, 1) 48%),
+                linear-gradient(180deg, #020617 0%, #04111f 100%);
+        }
 
-      <section id="screen-hero" class="screen active">
-        <article class="card hero-card">
-          <p class="pill">Apoyo para diabetes y prediabetes</p>
-          <div class="hero-proof">
-            <span class="hero-proof__star">4.9/5</span>
-            <span>Opiniones verificadas en Bolivia</span>
-          </div>
-          <h1>Apoya tu control de glucosa con Berberina</h1>
-          <p class="lead">
-            En personas con diabetes o prediabetes puede apoyar el metabolismo de la glucosa junto a habitos saludables.
-          </p>
-          <img
-            src="/assets/berberina.jpg?v=5"
-            alt="Frasco real de Berberina"
-            class="hero-image"
-            style="display:block;width:100%;max-width:100%;height:auto"
-            loading="eager"
-            fetchpriority="high"
-          />
-          <div class="hero-points">
-            <span>Apoyo glucemico diario</span>
-            <span>Menos picos de azucar</span>
-            <span>Energia metabolica</span>
-            <span>Peso saludable</span>
-          </div>
-          <div class="hero-testimonials">
-            <article class="t-card">
-              <p>"Me ayudo con el control de azucar despues de las comidas."</p>
-              <strong>Maria, Santa Cruz</strong>
-            </article>
-            <article class="t-card">
-              <p>"Senti mas estabilidad en energia durante el dia."</p>
-              <strong>Roxana, La Paz</strong>
-            </article>
-          </div>
-          <p class="hero-disclaimer">No reemplaza tratamiento medico. Si tienes diabetes, consulta a tu profesional de salud.</p>
-          <button id="heroCta" class="btn btn-primary btn-float">Ver si aplica para mi caso</button>
-        </article>
-      </section>
+        .glass-card {
+            background: rgba(15, 23, 42, 0.72);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            box-shadow: 0 18px 40px rgba(2, 6, 23, 0.45);
+        }
 
-      <section id="screen-quiz" class="screen">
-        <article class="card quiz-card">
-          <div class="quiz-meta">
-            <span class="quiz-tag">Evaluacion guiada</span>
-            <div class="quiz-dots" aria-hidden="true">
-              <span></span><span></span><span></span>
+        .neon-border {
+            border: 1px solid rgba(34, 197, 94, 0.32);
+            box-shadow: 0 0 20px rgba(34, 197, 94, 0.22);
+        }
+
+        .step {
+            display: none;
+        }
+
+        .step.active {
+            display: block;
+            animation: fade-up 0.35s ease forwards;
+        }
+
+        .hero-product-wrap {
+            position: relative;
+            border-radius: 32px;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(34, 197, 94, 0.22), transparent 28%),
+                radial-gradient(circle at 80% 10%, rgba(251, 191, 36, 0.16), transparent 26%),
+                linear-gradient(180deg, rgba(15, 23, 42, 0.7), rgba(2, 6, 23, 0.95));
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .hero-product-wrap::before {
+            content: "";
+            position: absolute;
+            inset: auto auto 18px 18px;
+            width: 84px;
+            height: 84px;
+            background: rgba(34, 197, 94, 0.18);
+            filter: blur(26px);
+            border-radius: 50%;
+        }
+
+        .hero-product-image {
+            display: block;
+            width: 100%;
+            height: 320px;
+            object-fit: contain;
+            object-position: center;
+            padding: 18px;
+        }
+
+        .chip-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .chip {
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            border: 1px solid rgba(34, 197, 94, 0.18);
+            background: rgba(34, 197, 94, 0.08);
+            color: #86efac;
+        }
+
+        .review-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 14px;
+        }
+
+        .review-card p {
+            font-size: 13px;
+            line-height: 1.35;
+            color: #e2e8f0;
+        }
+
+        .review-card strong {
+            display: block;
+            margin-top: 8px;
+            font-size: 11px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #22c55e;
+        }
+
+        #game-zone {
+            position: relative;
+            width: 100%;
+            height: 420px;
+            background:
+                radial-gradient(circle at 20% 10%, rgba(34, 197, 94, 0.08), transparent 20%),
+                radial-gradient(circle at 80% 20%, rgba(251, 191, 36, 0.08), transparent 18%),
+                #0f172a;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .coin-bio {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(circle, #fbbf24 0%, #b45309 100%);
+            border: 3px solid #fde047;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            color: #451a03;
+            box-shadow: 0 0 20px rgba(251, 191, 36, 0.55);
+            z-index: 10;
+        }
+
+        .coin-bio--big {
+            width: 72px;
+            height: 72px;
+            background: radial-gradient(circle, #fef08a 0%, #f59e0b 100%);
+        }
+
+        #social-toast {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 350px;
+            z-index: 100;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .field {
+            width: 100%;
+            background: rgba(15, 23, 42, 0.66);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 18px 20px;
+            border-radius: 18px;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .field:focus {
+            border-color: rgba(34, 197, 94, 0.8);
+            box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.12);
+        }
+
+        .benefit-line {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            font-size: 13px;
+            color: #cbd5e1;
+        }
+
+        .benefit-line span {
+            width: 28px;
+            height: 28px;
+            flex-shrink: 0;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(34, 197, 94, 0.12);
+            color: #22c55e;
+            font-weight: 900;
+        }
+
+        @keyframes fade-up {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 420px) {
+            .hero-product-image {
+                height: 280px;
+            }
+
+            #game-zone {
+                height: 360px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-dark min-h-screen">
+
+    <div id="social-toast" class="glass-card p-3 rounded-2xl flex items-center gap-3">
+        <div class="w-2 h-2 bg-green-500 rounded-full animate-ping"></div>
+        <p class="text-[11px]" id="toast-text"></p>
+    </div>
+
+    <div class="max-w-md mx-auto min-h-screen flex flex-col relative p-4">
+
+        <section id="step-1" class="step active text-center pt-6">
+            <div class="inline-block px-4 py-1 rounded-full border border-green-500/30 text-green-400 text-xs font-bold mb-6 tracking-widest uppercase">
+                Diabetes | Metabolismo | Bolivia
             </div>
-          </div>
-          <div class="progress-head">
-            <p id="quizStep" class="progress-label">Paso 1 de 3</p>
-            <span id="quizPercent" class="progress-percent">33%</span>
-          </div>
-          <div class="progress-track">
-            <div id="quizProgressBar" class="progress-fill"></div>
-          </div>
-          <img id="quizImage" class="quiz-image" src="" alt="" loading="lazy" />
-          <h2 id="quizQuestion" class="quiz-question"></h2>
-          <p id="quizHint" class="quiz-hint"></p>
-          <div class="choice-grid">
-            <button id="answerYes" class="btn btn-choice">Si, me interesa</button>
-            <button id="answerNo" class="btn btn-choice btn-choice-secondary">Quiero orientacion</button>
-          </div>
-        </article>
-      </section>
 
-      <section id="screen-benefits" class="screen">
-        <article class="card">
-          <p class="section-kicker">Tu resultado</p>
-          <h2>Tu perfil de diabetes puede desbloquear precio preferencial</h2>
-          <p class="lead">Segun tus respuestas sobre diabetes, hay cupos para descuento especial en Bolivia hoy.</p>
-          <img
-            src="/assets/berberina.jpg?v=5"
-            alt="Producto Berberina original"
-            class="benefit-image"
-            style="display:block;width:100%;max-width:100%;height:auto"
-            loading="lazy"
-          />
-          <div class="price-row">
-            <span class="price-old">320 Bs</span>
-            <span class="price-now">Hasta 150 Bs menos</span>
-          </div>
-          <ul class="benefit-list">
-            <li><span class="benefit-dot">+</span>Apoyo diario para personas con diabetes y prediabetes</li>
-            <li><span class="benefit-dot">+</span>Producto original y sellado</li>
-            <li><span class="benefit-dot">+</span>Pago contra entrega en Bolivia</li>
-            <li><span class="benefit-dot">+</span>Plan de descuento para diabetes segun disponibilidad</li>
-          </ul>
-          <button id="benefitsCta" class="btn btn-primary">Buscar mi descuento ahora</button>
-        </article>
-      </section>
+            <h1 class="text-4xl font-black mb-4 leading-none tracking-tight">
+                APOYA TU <span class="text-green-500 italic">GLUCOSA</span> Y TU METABOLISMO
+            </h1>
+            <p class="text-slate-300 mb-8 px-3 text-sm leading-relaxed">
+                Berberina Pro esta pensada para personas con diabetes, prediabetes o resistencia a la insulina que buscan apoyo diario en glucosa, energia y control de peso.
+            </p>
 
-      <section id="screen-loading" class="screen">
-        <article class="card loading-card">
-          <h2>Buscando descuentos disponibles...</h2>
-          <p class="lead">Estamos validando tu precio especial en Bolivia.</p>
-          <div class="loading-track">
-            <div id="loadingBar" class="loading-fill"></div>
-          </div>
-          <p id="loadingPercent" class="loading-percent">0%</p>
-        </article>
-      </section>
+            <div class="hero-product-wrap mb-8">
+                <img src="/assets/berberina.jpg?v=6" alt="Producto real Berberina Pro" class="hero-product-image">
+            </div>
 
-      <section id="screen-game" class="screen">
-        <article class="card game-card">
-          <p class="section-kicker">Descuento interactivo</p>
-          <h2>Catch the Discount</h2>
-          <p class="lead">Toca las monedas y acumula descuento en 10 segundos.</p>
-          <div class="hud">
-            <span>Tiempo: <strong id="gameTimer">10</strong>s</span>
-            <span>Descuento: <strong id="gameDiscount">0 Bs</strong></span>
-          </div>
-          <div id="gameZone" class="game-zone" aria-label="Zona de juego"></div>
-          <p class="game-note">Tip: en el segundo 8 aparece una moneda dorada de -40 Bs.</p>
-        </article>
-      </section>
+            <div class="chip-row justify-center mb-8">
+                <span class="chip">Glucosa</span>
+                <span class="chip">Diabetes</span>
+                <span class="chip">Peso</span>
+                <span class="chip">AMPK</span>
+            </div>
 
-      <section id="screen-reward" class="screen">
-        <article class="card reward-card">
-          <div id="confettiLayer" class="confetti-layer" aria-hidden="true"></div>
-          <p class="section-kicker">Precio desbloqueado</p>
-          <h2>Felicidades, desbloqueaste tu precio especial</h2>
-          <div class="price-summary">
-            <p>Precio original: <strong>320 Bs</strong></p>
-            <p>Descuento ganado: <strong id="rewardDiscount">0 Bs</strong></p>
-            <p class="price-final">Precio final: <strong id="rewardFinalPrice">320 Bs</strong></p>
-          </div>
-          <button id="rewardCta" class="btn btn-primary">Continuar</button>
-        </article>
-      </section>
+            <div class="glass-card p-6 rounded-3xl mb-6 text-left space-y-4">
+                <div class="benefit-line">
+                    <span>01</span>
+                    <p>Apoyo metabolico para personas con diabetes o prediabetes que buscan estabilidad en glucosa.</p>
+                </div>
+                <div class="benefit-line">
+                    <span>02</span>
+                    <p>Ayuda a mejorar energia y control de peso cuando hay resistencia a la insulina.</p>
+                </div>
+                <div class="benefit-line">
+                    <span>03</span>
+                    <p>Producto original con envio en Bolivia y pago contra entrega.</p>
+                </div>
+            </div>
 
-      <section id="screen-urgency" class="screen">
-        <article class="card urgency-card">
-          <p class="section-kicker">Reserva inmediata</p>
-          <h2>Tu descuento expira pronto</h2>
-          <p class="countdown-wrap">
-            Tu descuento expira en
-            <strong id="urgencyTimer" class="countdown">08:00</strong>
-          </p>
-          <p class="social-proof">187 personas desbloquearon su descuento hoy.</p>
-          <button id="toCheckoutCta" class="btn btn-primary btn-pulse">Comprar ahora</button>
-        </article>
-      </section>
+            <div class="grid gap-3 mb-8 text-left">
+                <div class="review-card">
+                    <p>"Lo compre por el tema de diabetes y senti mas control despues de las comidas."</p>
+                    <strong>Maria | Santa Cruz</strong>
+                </div>
+                <div class="review-card">
+                    <p>"Me gusto porque combina glucosa, metabolismo y control de peso en un solo apoyo."</p>
+                    <strong>Roxana | La Paz</strong>
+                </div>
+            </div>
 
-      <section id="screen-checkout" class="screen">
-        <article class="card checkout-card">
-          <p class="section-kicker">Finalizar pedido</p>
-          <h2>Finaliza tu pedido</h2>
-          <p class="lead">
-            Pago contra entrega disponible en toda Bolivia. Tu precio desbloqueado es
-            <strong id="checkoutPrice">320 Bs</strong>.
-          </p>
-          <p class="lead">Tu pedido se enviara directo por WhatsApp al asesor de ventas.</p>
-          <form id="checkoutForm" class="checkout-form" novalidate>
-            <label for="nameInput">Nombre</label>
-            <input id="nameInput" name="name" type="text" autocomplete="name" required />
+            <button onclick="goToQuiz()" class="w-full bg-green-500 hover:bg-green-400 text-black font-black py-5 rounded-2xl transition-all transform active:scale-95 shadow-[0_0_30px_rgba(34,197,94,0.4)]">
+                ANALIZAR MI PERFIL
+            </button>
+            <p class="text-[10px] text-slate-500 mt-4 px-4">No reemplaza indicacion medica. Si tienes diabetes, consulta a tu profesional de salud.</p>
+        </section>
 
-            <label for="phoneInput">Telefono</label>
-            <input id="phoneInput" name="phone" type="tel" inputmode="tel" required />
+        <section id="step-2" class="step">
+            <div class="mb-12">
+                <div class="flex justify-between text-[10px] uppercase tracking-widest text-slate-500 mb-2 font-bold">
+                    <span>Evaluacion Metabolica</span>
+                    <span id="quiz-num">1/4</span>
+                </div>
+                <div class="h-1 bg-slate-800 w-full rounded-full">
+                    <div id="quiz-bar" class="h-1 bg-green-500 transition-all duration-500" style="width: 25%"></div>
+                </div>
+            </div>
 
-            <label for="cityInput">Ciudad</label>
-            <input id="cityInput" name="city" type="text" autocomplete="address-level2" required />
+            <h2 id="q-text" class="text-2xl font-bold mb-8">Tienes diagnostico de diabetes o prediabetes?</h2>
 
-            <button type="submit" id="submitOrderBtn" class="btn btn-primary">Enviar pedido por WhatsApp</button>
-          </form>
+            <div id="q-options" class="space-y-4"></div>
+        </section>
 
-          <div class="trust-badges">
-            <span>Entrega rapida</span>
-            <span>Producto original</span>
-            <span>Garantia de satisfaccion</span>
-          </div>
+        <section id="step-3" class="step text-center pt-10">
+            <div class="w-24 h-24 bg-green-500/10 border border-green-500/50 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-12 h-12 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <h2 class="text-3xl font-black mb-4">PERFIL APROBADO</h2>
+            <p class="text-slate-400 mb-6">Tu perfil metabolico califica para un fondo promocional. Tienes 12 segundos para acumular ahorro para tu compra de Berberina.</p>
 
-          <p id="formMessage" class="form-message" role="status"></p>
-        </article>
-      </section>
-    </main>
-  </body>
+            <div class="hero-product-wrap mb-8">
+                <img src="/assets/berberina.jpg?v=6" alt="Producto Berberina" class="hero-product-image">
+            </div>
+
+            <div class="p-6 bg-white/5 border border-white/10 rounded-3xl mb-8">
+                <p class="text-xs text-slate-400 mb-2 uppercase tracking-widest">Saldo disponible en juego</p>
+                <p class="text-2xl font-bold text-yellow-400">Hasta 80 Bs acumulables</p>
+            </div>
+
+            <button onclick="initGame()" class="w-full bg-yellow-400 hover:bg-yellow-300 text-black font-black py-5 rounded-2xl shadow-[0_0_20px_rgba(234,179,8,0.3)] transition-transform active:scale-95">
+                INICIAR RECOLECCION
+            </button>
+        </section>
+
+        <section id="step-4" class="step h-full">
+            <div class="flex justify-between items-end mb-4 px-2">
+                <div>
+                    <p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Saldo acumulado</p>
+                    <p class="text-3xl font-black text-green-500"><span id="live-score">0</span><small class="text-sm ml-1 text-slate-400 font-normal">Bs</small></p>
+                </div>
+                <div class="text-right">
+                    <p class="text-[10px] text-red-400 uppercase font-bold">Tiempo</p>
+                    <p class="text-2xl font-mono font-bold" id="game-clock">12.0s</p>
+                </div>
+            </div>
+
+            <div id="game-zone"></div>
+        </section>
+
+        <section id="step-5" class="step pt-4">
+            <div class="glass-card p-8 rounded-[40px] text-center border-green-500/40 border-2 relative overflow-hidden mb-8">
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-green-500/20 blur-3xl"></div>
+                <img src="/assets/berberina.jpg?v=6" alt="Berberina producto" class="w-28 h-28 object-contain mx-auto mb-5 rounded-2xl bg-white/5 p-2">
+                <p class="text-xs uppercase tracking-widest text-slate-400 mb-2 font-bold">Ahorro ganado para hoy</p>
+                <h2 class="text-6xl font-black text-white mb-2" id="final-sum">0 <small class="text-xl">Bs</small></h2>
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-red-500/10 text-red-400 rounded-full border border-red-500/20">
+                    <span class="text-[10px] font-black uppercase tracking-tighter" id="timer-final">Expira en 09:59</span>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-bold mb-6 px-2">Confirma tu envio en Bolivia</h3>
+            <form id="wa-form" class="space-y-4 px-2">
+                <input type="text" id="f-name" placeholder="Nombre completo" required class="field">
+                <input type="tel" id="f-phone" placeholder="WhatsApp (Ej. 70012345)" required class="field">
+                <select id="f-city" required class="field text-slate-300">
+                    <option value="">Ciudad de entrega</option>
+                    <option>Santa Cruz</option>
+                    <option>La Paz</option>
+                    <option>Cochabamba</option>
+                    <option>Oruro</option>
+                    <option>Potosi</option>
+                    <option>Tarija</option>
+                    <option>Sucre</option>
+                    <option>Beni/Pando</option>
+                </select>
+                <button class="w-full bg-green-500 hover:bg-green-400 text-black font-black py-5 rounded-2xl mt-4 shadow-xl transition-transform active:scale-95">
+                    APLICAR MIS <span id="btn-val">0</span> BS AL PEDIDO
+                </button>
+            </form>
+            <p class="text-center text-[9px] text-slate-600 mt-8 uppercase tracking-widest">Acceso exclusivo Bolivia | Limitado a 1 uso por persona</p>
+        </section>
+
+    </div>
+
+    <script>
+        let score = 0;
+        let qIdx = 0;
+        let gameLoop = null;
+        let spawnLoop = null;
+        let urgencyLoop = null;
+        const whatsappNumber = "59160932596";
+
+        const quiz = [
+            { q: "Tienes diagnostico de diabetes o prediabetes?", a: ["Diabetes tipo 2", "Prediabetes", "Sospecha / resistencia a la insulina", "Quiero prevenir"] },
+            { q: "Que es lo que mas te preocupa hoy?", a: ["Azucar en sangre", "Peso y apetito", "Cansancio y energia", "Todo lo anterior"] },
+            { q: "En que ciudad te encuentras?", a: ["Santa Cruz", "La Paz / El Alto", "Cochabamba", "Otra ciudad"] },
+            { q: "Este pedido es para ti o para un familiar?", a: ["Para mi", "Para mi mama o papa", "Para mi pareja", "Para un familiar cercano"] }
+        ];
+
+        function setStep(n) {
+            document.querySelectorAll(".step").forEach((s) => s.classList.remove("active"));
+            document.getElementById("step-" + n).classList.add("active");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        function goToQuiz() {
+            const today = new Date().toDateString();
+            if (localStorage.getItem("played_today") === today) {
+                alert("Ya reclamaste tus creditos hoy. Vuelve manana para una nueva activacion.");
+                return;
+            }
+            qIdx = 0;
+            setStep(2);
+            renderQuiz();
+        }
+
+        function renderQuiz() {
+            const data = quiz[qIdx];
+            document.getElementById("q-text").innerText = data.q;
+            document.getElementById("quiz-num").innerText = (qIdx + 1) + "/4";
+            document.getElementById("quiz-bar").style.width = ((qIdx + 1) * 25) + "%";
+
+            const container = document.getElementById("q-options");
+            container.innerHTML = "";
+
+            data.a.forEach((opt) => {
+                const b = document.createElement("button");
+                b.type = "button";
+                b.className = "w-full p-5 text-left glass-card rounded-2xl border border-white/5 hover:border-green-500 transition-all font-medium text-sm active:scale-[0.99]";
+                b.innerText = opt;
+                b.onclick = () => {
+                    if (qIdx < quiz.length - 1) {
+                        qIdx += 1;
+                        renderQuiz();
+                    } else {
+                        setStep(3);
+                    }
+                };
+                container.appendChild(b);
+            });
+        }
+
+        function initGame() {
+            setStep(4);
+            score = 0;
+            document.getElementById("live-score").innerText = "0";
+            document.getElementById("game-zone").innerHTML = "";
+
+            let time = 12.0;
+            const clock = document.getElementById("game-clock");
+            const zone = document.getElementById("game-zone");
+
+            clearInterval(gameLoop);
+            clearInterval(spawnLoop);
+
+            gameLoop = setInterval(() => {
+                time = Math.max(0, time - 0.1);
+                clock.innerText = time.toFixed(1) + "s";
+                if (time <= 0) {
+                    clearInterval(gameLoop);
+                    clearInterval(spawnLoop);
+                    finishGame();
+                }
+            }, 100);
+
+            spawnLoop = setInterval(() => {
+                if (time <= 0) return;
+                const c = document.createElement("button");
+                const values = [2, 3, 5];
+                const val = values[Math.floor(Math.random() * values.length)];
+                const isBig = time < 4.5 && Math.random() > 0.72;
+                const realValue = isBig ? 8 : val;
+                c.type = "button";
+                c.className = "coin-bio" + (isBig ? " coin-bio--big" : "");
+                c.innerText = realValue;
+                c.style.left = Math.random() * Math.max(10, zone.offsetWidth - 80) + "px";
+                c.style.top = Math.random() * Math.max(10, zone.offsetHeight - 80) + "px";
+                c.onclick = () => {
+                    score += realValue;
+                    document.getElementById("live-score").innerText = score;
+                    c.remove();
+                };
+                zone.appendChild(c);
+                setTimeout(() => c.remove(), isBig ? 1500 : 1200);
+            }, 580);
+        }
+
+        function finishGame() {
+            if (score < 40) score = Math.floor(Math.random() * 15) + 40;
+            if (score > 80) score = 80;
+
+            document.getElementById("final-sum").innerHTML = score + " <small class=\"text-xl\">Bs</small>";
+            document.getElementById("btn-val").innerText = score;
+            localStorage.setItem("played_today", new Date().toDateString());
+            setStep(5);
+            startUrgency();
+        }
+
+        function startUrgency() {
+            let t = 600;
+            clearInterval(urgencyLoop);
+            urgencyLoop = setInterval(() => {
+                t -= 1;
+                const m = Math.floor(t / 60);
+                const s = t % 60;
+                document.getElementById("timer-final").innerText = "Expira en " + m + ":" + (s < 10 ? "0" : "") + s;
+                if (t <= 0) clearInterval(urgencyLoop);
+            }, 1000);
+        }
+
+        const names = ["Ricardo M.", "Elena V.", "Hugo L.", "Sara P.", "Carlos D."];
+        const actions = ["gano 62 Bs", "gano 55 Bs", "acaba de comprar", "activo su cupon"];
+        const cities = ["Santa Cruz", "La Paz", "Cochabamba"];
+
+        function showToast() {
+            const toast = document.getElementById("social-toast");
+            const name = names[Math.floor(Math.random() * names.length)];
+            const action = actions[Math.floor(Math.random() * actions.length)];
+            const city = cities[Math.floor(Math.random() * cities.length)];
+            document.getElementById("toast-text").innerText = name + " de " + city + " " + action;
+            toast.style.opacity = 1;
+            setTimeout(() => {
+                toast.style.opacity = 0;
+            }, 4000);
+        }
+
+        setInterval(showToast, 25000);
+
+        document.getElementById("wa-form").onsubmit = (e) => {
+            e.preventDefault();
+            const n = document.getElementById("f-name").value.trim();
+            const p = document.getElementById("f-phone").value.trim();
+            const c = document.getElementById("f-city").value;
+            const msg =
+                "Hola Berberina Bolivia! He completado el analisis metabolico.%0A%0A" +
+                "*Nombre:* " + encodeURIComponent(n) + "%0A" +
+                "*WhatsApp:* " + encodeURIComponent(p) + "%0A" +
+                "*Ciudad:* " + encodeURIComponent(c) + "%0A" +
+                "*Saldo ganado:* " + score + " Bs%0A%0A" +
+                "Quiero activar mis creditos para mi pedido hoy.";
+            window.location.href = "https://wa.me/" + whatsappNumber + "?text=" + msg;
+        };
+    </script>
+</body>
 </html>

@@ -1,0 +1,208 @@
+﻿<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Berberina Bolivia | Apoyo de Glucosa + Descuento</title>
+    <meta
+      name="description"
+      content="Conoce beneficios de Berberina para apoyo de glucosa y diabetes, y luego desbloquea precio especial con pago contra entrega en Bolivia."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css?v=8" />
+    <script defer src="/app.js?v=8"></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="top-chip">
+        <p class="top-chip__text">Envio nacional + Pago contra entrega | Oferta activa hoy</p>
+      </header>
+
+      <section class="trust-strip" aria-label="Indicadores de confianza">
+        <span>+3,200 pedidos entregados</span>
+        <span>Atencion por WhatsApp</span>
+        <span>Entrega nacional</span>
+      </section>
+
+      <section id="screen-hero" class="screen active">
+        <article class="card hero-card">
+          <p class="pill">Apoyo para diabetes y prediabetes</p>
+          <div class="hero-proof">
+            <span class="hero-proof__star">4.9/5</span>
+            <span>Opiniones verificadas en Bolivia</span>
+          </div>
+          <h1>Apoya tu control de glucosa con Berberina</h1>
+          <p class="lead">
+            En personas con diabetes o prediabetes puede apoyar el metabolismo de la glucosa junto a habitos saludables.
+          </p>
+          <img
+            src="/assets/berberina.jpg?v=5"
+            alt="Frasco real de Berberina"
+            class="hero-image"
+            style="display:block;width:100%;max-width:100%;height:auto"
+            loading="eager"
+            fetchpriority="high"
+          />
+          <div class="hero-points">
+            <span>Apoyo glucemico diario</span>
+            <span>Menos picos de azucar</span>
+            <span>Energia metabolica</span>
+            <span>Peso saludable</span>
+          </div>
+          <div class="hero-testimonials">
+            <article class="t-card">
+              <p>"Me ayudo con el control de azucar despues de las comidas."</p>
+              <strong>Maria, Santa Cruz</strong>
+            </article>
+            <article class="t-card">
+              <p>"Senti mas estabilidad en energia durante el dia."</p>
+              <strong>Roxana, La Paz</strong>
+            </article>
+          </div>
+          <p class="hero-disclaimer">No reemplaza tratamiento medico. Si tienes diabetes, consulta a tu profesional de salud.</p>
+          <button id="heroCta" class="btn btn-primary btn-float">Ver si aplica para mi caso</button>
+        </article>
+      </section>
+
+      <section id="screen-quiz" class="screen">
+        <article class="card quiz-card">
+          <div class="quiz-meta">
+            <span class="quiz-tag">Evaluacion guiada</span>
+            <div class="quiz-dots" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="progress-head">
+            <p id="quizStep" class="progress-label">Paso 1 de 3</p>
+            <span id="quizPercent" class="progress-percent">33%</span>
+          </div>
+          <div class="progress-track">
+            <div id="quizProgressBar" class="progress-fill"></div>
+          </div>
+          <img id="quizImage" class="quiz-image" src="" alt="" loading="lazy" />
+          <h2 id="quizQuestion" class="quiz-question"></h2>
+          <p id="quizHint" class="quiz-hint"></p>
+          <div class="choice-grid">
+            <button id="answerYes" class="btn btn-choice">Si, me interesa</button>
+            <button id="answerNo" class="btn btn-choice btn-choice-secondary">Quiero orientacion</button>
+          </div>
+        </article>
+      </section>
+
+      <section id="screen-benefits" class="screen">
+        <article class="card">
+          <p class="section-kicker">Tu resultado</p>
+          <h2>Tu perfil de diabetes puede desbloquear precio preferencial</h2>
+          <p class="lead">Segun tus respuestas sobre diabetes, hay cupos para descuento especial en Bolivia hoy.</p>
+          <img
+            src="/assets/berberina.jpg?v=5"
+            alt="Producto Berberina original"
+            class="benefit-image"
+            style="display:block;width:100%;max-width:100%;height:auto"
+            loading="lazy"
+          />
+          <div class="price-row">
+            <span class="price-old">320 Bs</span>
+            <span class="price-now">Hasta 150 Bs menos</span>
+          </div>
+          <ul class="benefit-list">
+            <li><span class="benefit-dot">+</span>Apoyo diario para personas con diabetes y prediabetes</li>
+            <li><span class="benefit-dot">+</span>Producto original y sellado</li>
+            <li><span class="benefit-dot">+</span>Pago contra entrega en Bolivia</li>
+            <li><span class="benefit-dot">+</span>Plan de descuento para diabetes segun disponibilidad</li>
+          </ul>
+          <button id="benefitsCta" class="btn btn-primary">Buscar mi descuento ahora</button>
+        </article>
+      </section>
+
+      <section id="screen-loading" class="screen">
+        <article class="card loading-card">
+          <h2>Buscando descuentos disponibles...</h2>
+          <p class="lead">Estamos validando tu precio especial en Bolivia.</p>
+          <div class="loading-track">
+            <div id="loadingBar" class="loading-fill"></div>
+          </div>
+          <p id="loadingPercent" class="loading-percent">0%</p>
+        </article>
+      </section>
+
+      <section id="screen-game" class="screen">
+        <article class="card game-card">
+          <p class="section-kicker">Descuento interactivo</p>
+          <h2>Catch the Discount</h2>
+          <p class="lead">Toca las monedas y acumula descuento en 10 segundos.</p>
+          <div class="hud">
+            <span>Tiempo: <strong id="gameTimer">10</strong>s</span>
+            <span>Descuento: <strong id="gameDiscount">0 Bs</strong></span>
+          </div>
+          <div id="gameZone" class="game-zone" aria-label="Zona de juego"></div>
+          <p class="game-note">Tip: en el segundo 8 aparece una moneda dorada de -40 Bs.</p>
+        </article>
+      </section>
+
+      <section id="screen-reward" class="screen">
+        <article class="card reward-card">
+          <div id="confettiLayer" class="confetti-layer" aria-hidden="true"></div>
+          <p class="section-kicker">Precio desbloqueado</p>
+          <h2>Felicidades, desbloqueaste tu precio especial</h2>
+          <div class="price-summary">
+            <p>Precio original: <strong>320 Bs</strong></p>
+            <p>Descuento ganado: <strong id="rewardDiscount">0 Bs</strong></p>
+            <p class="price-final">Precio final: <strong id="rewardFinalPrice">320 Bs</strong></p>
+          </div>
+          <button id="rewardCta" class="btn btn-primary">Continuar</button>
+        </article>
+      </section>
+
+      <section id="screen-urgency" class="screen">
+        <article class="card urgency-card">
+          <p class="section-kicker">Reserva inmediata</p>
+          <h2>Tu descuento expira pronto</h2>
+          <p class="countdown-wrap">
+            Tu descuento expira en
+            <strong id="urgencyTimer" class="countdown">08:00</strong>
+          </p>
+          <p class="social-proof">187 personas desbloquearon su descuento hoy.</p>
+          <button id="toCheckoutCta" class="btn btn-primary btn-pulse">Comprar ahora</button>
+        </article>
+      </section>
+
+      <section id="screen-checkout" class="screen">
+        <article class="card checkout-card">
+          <p class="section-kicker">Finalizar pedido</p>
+          <h2>Finaliza tu pedido</h2>
+          <p class="lead">
+            Pago contra entrega disponible en toda Bolivia. Tu precio desbloqueado es
+            <strong id="checkoutPrice">320 Bs</strong>.
+          </p>
+          <p class="lead">Tu pedido se enviara directo por WhatsApp al asesor de ventas.</p>
+          <form id="checkoutForm" class="checkout-form" novalidate>
+            <label for="nameInput">Nombre</label>
+            <input id="nameInput" name="name" type="text" autocomplete="name" required />
+
+            <label for="phoneInput">Telefono</label>
+            <input id="phoneInput" name="phone" type="tel" inputmode="tel" required />
+
+            <label for="cityInput">Ciudad</label>
+            <input id="cityInput" name="city" type="text" autocomplete="address-level2" required />
+
+            <button type="submit" id="submitOrderBtn" class="btn btn-primary">Enviar pedido por WhatsApp</button>
+          </form>
+
+          <div class="trust-badges">
+            <span>Entrega rapida</span>
+            <span>Producto original</span>
+            <span>Garantia de satisfaccion</span>
+          </div>
+
+          <p id="formMessage" class="form-message" role="status"></p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
