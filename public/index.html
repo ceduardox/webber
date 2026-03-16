@@ -189,6 +189,19 @@
             pointer-events: auto;
         }
 
+        #sticky-game-cta {
+            opacity: 0;
+            transform: translateY(110%);
+            pointer-events: none;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+
+        body[data-step="3"] #sticky-game-cta {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
         .benefit-line {
             display: flex;
             gap: 12px;
@@ -387,6 +400,17 @@
                     <p class="text-[10px] uppercase tracking-[0.22em] text-slate-400 font-bold text-center mb-2">Acceso al analisis</p>
                     <button onclick="goToQuiz()" class="w-full bg-green-500 hover:bg-green-400 text-black font-black py-4 rounded-2xl transition-all transform active:scale-95 shadow-[0_0_30px_rgba(34,197,94,0.35)]">
                         ANALIZAR MI PERFIL
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="sticky-game-cta" class="fixed bottom-0 left-0 right-0 z-50 px-4 pb-4 pt-4 bg-gradient-to-t from-slate-950 via-slate-950/95 to-transparent">
+            <div class="max-w-md mx-auto">
+                <div class="glass-card rounded-[28px] p-3 border border-yellow-400/20 shadow-[0_0_25px_rgba(250,204,21,0.14)]">
+                    <p class="text-[10px] uppercase tracking-[0.22em] text-slate-400 font-bold text-center mb-2">Juego de ahorro</p>
+                    <button onclick="initGame()" class="w-full bg-yellow-400 hover:bg-yellow-300 text-black font-black py-4 rounded-2xl transition-all transform active:scale-95 shadow-[0_0_30px_rgba(250,204,21,0.3)]">
+                        INICIAR RECOLECCION
                     </button>
                 </div>
             </div>
